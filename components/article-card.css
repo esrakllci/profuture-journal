@@ -1,0 +1,202 @@
+.article-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  padding-top: 68px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.article-tabs {
+  display: flex;
+  gap: 12px;
+  position: absolute;
+  top: 20px;
+  left: 24px;
+}
+
+.article-tab {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #F6F8FF;
+  color: #112053;
+  transition: all 0.2s ease;
+}
+
+.article-tab--active {
+  background-color: #273D89;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+/* Sol taraf - başlık ve meta bilgileri */
+.article-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Satır 1: PDF ikonu + Başlık */
+.article-row-1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pdf-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.article-title {
+  color: #2A2C31;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+/* Satır 2: Sayfa ikonu + Sayfa metni + Yazar isimleri */
+.article-row-2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pages-icon{
+  width: 12px;
+  height: 15px;
+  flex-shrink: 0;
+  filter: brightness(0) saturate(100%) invert(16%) sepia(5%) saturate(1040%) hue-rotate(169deg) brightness(98%) contrast(92%);
+
+}
+
+.authors-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  filter: brightness(0) saturate(100%) invert(16%) sepia(5%) saturate(1040%) hue-rotate(169deg) brightness(98%) contrast(92%);
+}
+
+.article-pages,
+.article-authors {
+  font-size: 14px;
+  color: #2A2C31;
+}
+
+.article-pages strong {
+  font-weight: 600;
+}
+
+/* Sağ taraf - butonlar yan yana */
+.article-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.article-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.article-btn--print {
+  background-color: #ffffff;
+  border: 1px solid #acb1c6;
+}
+
+.article-btn--print:hover {
+  background-color: #112053;
+  transform: scale(1.05);
+}
+
+.article-btn--print:hover .article-btn-icon {
+  filter: brightness(0) invert(1);
+}
+
+.article-btn--download {
+  background-color: #ffffff;
+  border: 1px solid #acb1c6;
+}
+
+.article-btn--download:hover {
+  background-color: #112053;
+  transform: scale(1.05);
+}
+
+.article-btn--download:hover .article-btn-icon {
+  filter: brightness(0) invert(1);
+}
+
+.article-btn--view {
+  width: auto;
+  padding: 0.8rem 1.7rem;
+  gap: 0.5rem;
+  border-radius: 25px;
+  background-color: #273D89;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.article-btn--view:hover {
+  background-color: #112053;
+}
+
+.article-btn-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.article-btn--view .article-btn-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .article-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .article-row-1,
+  .article-row-2 {
+    flex-wrap: wrap;
+  }
+
+  .article-actions {
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .article-btn--view {
+    width: 100%;
+  }
+}
