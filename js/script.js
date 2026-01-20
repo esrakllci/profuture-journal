@@ -71,9 +71,11 @@ async function loadMagazineCards() {
       `card-badge ${magazine.badgeClass}">`.trim(),
     );
 
-    // Add featured class if needed
+    // Add featured class and son-sayi badge if needed
     if (magazine.featured) {
       cardHTML = cardHTML.replace('class="magazine-card"', 'class="magazine-card featured"');
+      // Son Sayı badge'i card-image içine ekle (görselin sol kenarında)
+      cardHTML = cardHTML.replace('<div class="card-image">', '<div class="card-image"><div class="son-sayi-badge">Son Sayı</div>');
     }
 
     cardHTML = cardHTML.replace("images/card-img.png", magazine.image);
