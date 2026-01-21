@@ -14,8 +14,7 @@ html {
 
 main {
   position: relative;
-  max-width: 1440px;
-  margin:0 auto
+  width: 100%;
 }
 
 header {
@@ -391,8 +390,9 @@ body {
   min-height: 500px;
   display: flex;
   align-items: center;
-  padding: 80px 120px;
+  padding: 80px 0;
   position: relative;
+  width: 100%;
 }
 
 .hero::before {
@@ -415,6 +415,8 @@ body {
   z-index: 2;
   max-width: 550px;
   color: #ffffff;
+  padding-left: 120px;
+  padding-right: 20px;
 }
 
 .hero-title {
@@ -489,7 +491,7 @@ body {
 .magazine-container {
   position: absolute;
   right: 80px;
-  top: 350px;
+  top: 250px;
   z-index: 10;
 }
 
@@ -1325,7 +1327,7 @@ footer {
   
   /* Hero */
   .hero {
-    padding: 40px;
+    padding: 40px 0;
     min-height: auto;
     flex-direction: column;
     padding-bottom: 60px;
@@ -1333,6 +1335,8 @@ footer {
   
   .hero-content {
     max-width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   
   .hero-title {
@@ -1484,13 +1488,15 @@ footer {
   
   /* Hero */
   .hero {
-    padding: 30px 20px;
+    padding: 30px 0;
     min-height: auto;
     padding-bottom: 40px;
   }
   
   .hero-content {
     text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   
   .hero-title {
@@ -1803,7 +1809,7 @@ footer {
   
   /* Hero */
   .hero {
-    padding: 25px 16px;
+    padding: 25px 0;
     min-height: auto;
     padding-bottom: 40px;
   }
@@ -1811,6 +1817,8 @@ footer {
   .hero-content {
     max-width: 100%;
     text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
   }
   
   .hero-title {
