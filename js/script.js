@@ -71,10 +71,10 @@ async function loadMagazineCards() {
       `card-badge ${magazine.badgeClass}">`.trim(),
     );
 
-    // Add featured class and son-sayi badge if needed
+
     if (magazine.featured) {
       cardHTML = cardHTML.replace('class="magazine-card"', 'class="magazine-card featured"');
-      // Son Sayı badge'i card-image içine ekle (görselin sol kenarında)
+    
       cardHTML = cardHTML.replace('<div class="card-image">', '<div class="card-image"><div class="son-sayi-badge">Son Sayı</div>');
     }
 
@@ -172,7 +172,7 @@ async function loadArticleCards() {
   articles.forEach((article) => {
     let cardHTML = template;
 
-    // Template içindeki değerleri değiştir
+
     cardHTML = cardHTML.replace(/İklim/g, article.category);
     cardHTML = cardHTML.replace(/Araştırma Makalesi/g, article.type);
     cardHTML = cardHTML.replace(
@@ -199,14 +199,14 @@ function initSearchToggle() {
     isSearchOpen = !isSearchOpen;
     
     if (isSearchOpen) {
-      // Arama açık - butonları gizle, inputu göster
+      
       headerButtons.forEach(button => {
         button.style.display = "none";
       });
       searchInput.style.display = "block";
       searchInput.focus();
     } else {
-      // Arama kapalı - butonları göster, inputu gizle
+    
       headerButtons.forEach(button => {
         button.style.display = "inline-flex";
       });
@@ -223,8 +223,39 @@ function initSearchToggle() {
   });
 }
 
+// Hamburger Menu Toggle
+function initHamburgerMenu() {
+  const hamburgerMenu = document.querySelector(".hamburger-menu");
+  const mobileMenu = document.querySelector(".mobile-menu");
+  
+  if (!hamburgerMenu || !mobileMenu) return;
+  
+  hamburgerMenu.addEventListener("click", () => {
+    hamburgerMenu.classList.toggle("active");
+    mobileMenu.classList.toggle("active");
+  });
+  
+  // Menü linklerine tıklandığında menüyü kapat
+  const mobileNavLinks = mobileMenu.querySelectorAll("a");
+  mobileNavLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      hamburgerMenu.classList.remove("active");
+      mobileMenu.classList.remove("active");
+    });
+  });
+  
+  // Escape tuşu ile menüyü kapat
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && mobileMenu.classList.contains("active")) {
+      hamburgerMenu.classList.remove("active");
+      mobileMenu.classList.remove("active");
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   loadMagazineCards();
   loadArticleCards();
   initSearchToggle();
+  initHamburgerMenu();
 });

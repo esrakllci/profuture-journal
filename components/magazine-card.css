@@ -217,14 +217,122 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .magazine-card {
+    grid-template-columns: 140px 1fr;
+    gap: 0.5rem;
+    padding: 1.2rem 0.5rem;
+  }
+  
+  .card-title {
+    font-size: 18px;
+  }
+  
+  .meta-item {
+    font-size: 14px;
+  }
+  
+  .card-date {
+    font-size: 14px;
+  }
+  
+  .action-btn {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .son-sayi-badge {
+    padding: 16px 8px;
+    font-size: 12px;
+    left: -10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .magazine-card {
+    grid-template-columns: 120px 1fr;
+    gap: 0.4rem;
+    padding: 1rem 0.4rem;
+    aspect-ratio: auto;
+  }
+  
+  .card-badge {
+    top: 15px;
+    right: 15px;
+    font-size: 11px;
+    padding: 2px 6px;
+  }
+  
+  .card-title {
+    font-size: 16px;
+  }
+  
+  .card-span {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+  
+  .meta-item {
+    font-size: 13px;
+    gap: 4px;
+  }
+  
+  .card-meta {
+    gap: 12px;
+  }
+  
+  .meta-icon {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .card-date {
+    font-size: 13px;
+  }
+  
+  .date-icon {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .card-actions {
+    gap: 10px;
+  }
+  
+  .action-btn {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .download-icon,
+  .right-arrow-icon {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .son-sayi-badge {
+    padding: 14px 7px;
+    font-size: 11px;
+    left: -8px;
+    border-radius: 16px 0 0 16px;
+  }
+}
+
 @media (max-width: 640px) {
   .magazine-card {
     grid-template-columns: 1fr;
+    text-align: center;
+    padding: 1rem;
   }
 
   .card-image,
   .card-info {
     grid-column: 1;
+  }
+  
+  .card-image {
+    max-width: 150px;
+    margin: 0 auto;
   }
 
   .card-content {
@@ -232,9 +340,124 @@
     align-items: center;
     text-align: center;
   }
+  
+  .card-label {
+    justify-items: center;
+  }
+  
+  .card-title {
+    font-size: 15px;
+  }
 
   .card-meta,
   .card-actions {
     justify-content: center;
+  }
+  
+  .son-sayi-badge {
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%) rotate(0);
+    writing-mode: horizontal-tb;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .magazine-card {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 20px;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .card-image {
+    max-width: 240px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .card-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+  }
+  
+  .card-label {
+    justify-content: center;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  
+  .card-meta {
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .meta-item {
+    font-size: 14px;
+  }
+  
+  .card-date {
+    font-size: 14px;
+    justify-content: center;
+  }
+  
+  .card-actions {
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .action-btn {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .eye-icon {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .download-icon,
+  .right-arrow-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .son-sayi-badge {
+    position: absolute;
+    left: 50%;
+    top: -5px;
+    transform: translateX(-50%);
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 9px;
+    letter-spacing: 0.3px;
+  }
+  
+  .card-badge {
+    font-size: 8px;
+    padding: 3px 6px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
   }
 }
