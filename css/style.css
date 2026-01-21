@@ -208,6 +208,15 @@ header {
   border-color: #273d89;
 }
 
+/* Desktop: hide mobile-only elements */
+.header-right-group {
+  display: contents; /* On desktop, behave as if wrapper doesn't exist */
+}
+
+.mobile-search-input {
+  display: none; /* Hidden on desktop */
+}
+
 .search-button {
   display: inline-flex;
   align-items: center;
@@ -859,7 +868,7 @@ footer {
   grid-template-columns: 350px 1fr;
   align-items: center;
 
-  padding-right: 350px; /* Sağdaki görsel için alan bırak */
+  padding-right: 350px; 
 }
 
 .cfp-images {
@@ -953,10 +962,10 @@ footer {
   filter: brightness(0) invert(1);
 }
 
-/* Sağdaki dergi görseli - Wrapper'a göre pozisyonlu */
+
 .cfp-card {
   position: absolute;
-  right: 120px; /* Wrapper'ın padding'i ile aynı */
+  right: 120px; 
   top: 0;
   z-index: 10;
 }
@@ -1070,14 +1079,20 @@ footer {
   transform: translateY(-50%) rotate(180deg);
   background-color: #DB0D15;
   color: #ffffff;
-  padding: 28px 14px;
-  border-radius: 24px 0 0 24px;
-  font-size: 16px;
+  /* 155x65 oranı: min boyutlar + clamp */
+  min-height: clamp(100px, 10.8vw, 155px);
+  min-width: clamp(45px, 4.5vw, 65px);
+  padding: 1em 0.6em;
+  border-radius: clamp(14px, 1.4vw, 20px) 0 0 clamp(14px, 1.4vw, 20px);
+  font-size: clamp(12px, 1.1vw, 16px);
   font-weight: 600;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .featured-img {
@@ -1199,11 +1214,11 @@ footer {
   gap: 20px;
 }
 
-/* ============================================
+/* 
    RESPONSIVE STYLES
-   ============================================ */
+*/
 
-/* Large Desktop (1400px and below) */
+
 @media (max-width: 1400px) {
   .hero {
     padding: 60px 80px;
@@ -1412,7 +1427,7 @@ footer {
   }
   
   .logo-container {
-    padding: 12px 20px;
+    padding: 0 16px 0 0;
     margin-right: 0;
     border-top-right-radius: 40px;
   }
@@ -1548,9 +1563,9 @@ footer {
   
   .magazines-controls {
     width: 100%;
-    justify-content: center;
-  }
-  
+  justify-content: center;
+}
+
   .magazines-swiper .swiper-slide {
     width: 100%;
   }
@@ -1620,13 +1635,13 @@ footer {
   }
   
   .articles-header {
-    flex-direction: column;
-  align-items: center;
-    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
   
   .articles-titles {
-    text-align: center;
+    text-align: left;
   }
   
   .articles-subtitle {
@@ -1646,7 +1661,7 @@ footer {
   /* Footer */
   .footer-main {
     padding: 30px 20px;
-    flex-direction: column;
+  flex-direction: column;
     gap: 30px;
   }
   
@@ -1709,22 +1724,32 @@ footer {
   }
   
   .logo-container {
-    padding: 10px 16px;
+    padding: 8px 16px 8px 12px;
     margin-right: 0;
     border-top-right-radius: 30px;
   }
   
   .logo-container img {
-    width: 90px;
+    width: 100px;
+    height: auto;
   }
   
   .navigation {
     padding: 0 6px;
-    gap: 8px;
+  gap: 8px;
+    width: 100%;
+    justify-content: flex-end;
   }
   
   .home-icon {
     display: none;
+  }
+  
+  .header-right-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+    margin-left: auto;
   }
   
   .search-button {
@@ -1751,6 +1776,21 @@ footer {
     top: 58px;
   }
   
+  /* Mobile search input */
+  .mobile-search-input {
+    display: none;
+    width: calc(100% - 60px);
+    padding: 8px 12px;
+    border: 1px solid #acb1c6;
+    border-radius: 20px;
+  font-size: 14px;
+    outline: none;
+  }
+  
+  .mobile-search-input.active {
+    display: block;
+  }
+  
   /* Hero */
   .hero {
     padding: 25px 16px;
@@ -1774,7 +1814,7 @@ footer {
   }
   
   .hero-info {
-    gap: 12px;
+  gap: 12px;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -1818,7 +1858,8 @@ footer {
     padding: 12px 20px;
     min-width: auto;
     width: 100%;
-    justify-content: center;
+  justify-content: center;
+  gap: 8px;
   }
   
   /* Magazines Section */
@@ -1828,35 +1869,48 @@ footer {
   
   .magazines-header {
     flex-direction: column;
-    gap: 16px;
-    align-items: flex-start;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
   }
 
   .magazines-controls {
+    display: none;
+  }
+  
+  .magazines-title-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
     width: 100%;
-    justify-content: space-between;
+  }
+
+  .magazines-title-with-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
   }
   
   .magazines-h5 {
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
-    width: 100%;
   }
   
   .magazines-h2 {
-    font-size: 22px;
+    font-size: 18px;
     text-align: center;
   }
   
   .swiper-button-prev-custom,
   .swiper-button-next-custom {
-    width: 36px;
-    height: 36px;
+    display: none;
   }
   
   .view-all-btn {
     font-size: 13px;
-    padding: 10px 14px;
+    padding: 12px 16px;
+    width: 100%;
+    justify-content: center;
   }
   
   /* Call for Papers */
@@ -1884,7 +1938,7 @@ footer {
   }
   
   .cfp-label {
-    font-size: 14px;
+  font-size: 14px;
   }
   
   .cfp-title {
@@ -1916,33 +1970,36 @@ footer {
     flex-direction: column;
     gap: 25px;
   }
-  
+
   .featured-magazine {
     display: none;
   }
   
   .articles-content {
     width: 100%;
-  }
-  
+}
+
   .articles-header {
     flex-direction: column;
-    gap: 16px;
-    align-items: center;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .articles-titles {
     text-align: center;
   }
   
   .articles-subtitle {
-    font-size: 14px;
+    font-size: 12px;
   }
   
   .articles-title {
-    font-size: 22px;
+    font-size: 18px;
   }
   
   .view-all-articles-btn {
     font-size: 13px;
-    padding: 10px 14px;
+    padding: 12px 16px;
     width: 100%;
     justify-content: center;
   }

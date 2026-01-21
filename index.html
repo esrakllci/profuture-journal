@@ -1,57 +1,57 @@
 <!doctype html>
 <html lang="tr">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Profuture - Akademik Dergi" />
-    <title>Profuture</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Profuture - Akademik Dergi" />
+  <title>Profuture</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico?v=2" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=2" />
+  <link rel="stylesheet" href="css/style.css?v=39" />
   <link rel="stylesheet" href="components/article-card.css" />
-  <link rel="stylesheet" href="components/magazine-card.css" />
+  <link rel="stylesheet" href="components/magazine-card.css?v=37" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/script.js?v=2" defer></script>
-  </head>
+</head>
 
-  <body>
-    <header>
-      <div class="menu-bar">
-        <div class="logo-container">
-          <img src="images/logo.svg" alt="Profuture Logo" />
-        </div>
-        <div class="right-section">
-          <div class="contact-info">
-            <div class="contact-text">
-              <p>
+<body>
+  <header>
+    <div class="menu-bar">
+      <div class="logo-container">
+        <img src="images/logo.svg" alt="Profuture Logo" />
+      </div>
+      <div class="right-section">
+        <div class="contact-info">
+          <div class="contact-text">
+            <p>
               <img src="icons/message.svg" alt="E-posta ikonu" class="message-icon" />
-                profuture@gmail.com
-              </p>
-              <p>
-                ISSN: <span>345-255</span> Başlangıç <span>2025</span> Periyot:
-                <span>Yılda 2 Sayı</span>
-              </p>
-            </div>
+              profuture@gmail.com
+            </p>
+            <p>
+              ISSN: <span>345-255</span> Başlangıç <span>2025</span> Periyot:
+              <span>Yılda 2 Sayı</span>
+            </p>
           </div>
-          <nav class="navigation">
+        </div>
+        <nav class="navigation">
           <a href="#">
             <img src="icons/home.svg" alt="Ana sayfa ikonu" class="home-icon" />
           </a>
-            <ul class="nav-links">
-              <li><a href="#amac-kapsam">Amaç ve Kapsam</a></li>
-              <li>
-                <a href="#etik-ilkeler">Etik İlkeler ve Yayın Politikası</a>
-              </li>
-              <li><a href="#makale-cagrilari">Makale Çağrıları</a></li>
-              <li><a href="#sayilar">Sayılar</a></li>
-              <li><a href="#iletisim">İletişim</a></li>
-            </ul>
+          <ul class="nav-links">
+            <li><a href="#amac-kapsam">Amaç ve Kapsam</a></li>
+            <li>
+              <a href="#etik-ilkeler">Etik İlkeler ve Yayın Politikası</a>
+            </li>
+            <li><a href="#makale-cagrilari">Makale Çağrıları</a></li>
+            <li><a href="#sayilar">Sayılar</a></li>
+            <li><a href="#iletisim">İletişim</a></li>
+          </ul>
 
           <div class="header-buttons-wrapper">
             <button class="button--primary header-button">
@@ -67,15 +67,19 @@
             <input type="text" class="search-input" placeholder="Arama..." style="display: none;" />
           </div>
 
-            <button class="search-button">
-            <img src="icons/search.svg" alt="Arama ikonu" class="search-icon" />
-          </button>
+          <input type="text" class="mobile-search-input" placeholder="Arama..." />
 
-          <button class="hamburger-menu" aria-label="Menü">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-          </button>
+          <div class="header-right-group">
+            <button class="search-button">
+              <img src="icons/search.svg" alt="Arama ikonu" class="search-icon" />
+            </button>
+
+            <button class="hamburger-menu" aria-label="Menü">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </button>
+          </div>
         </nav>
 
         <!-- Mobile Menu -->
@@ -98,95 +102,95 @@
             </button>
           </div>
         </div>
-        </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="hero">
-        <div class="hero-content">
-          <h1 class="hero-title">
-            Profuture Teknoloji Dergisi<br />
-            Son Sayı Yayında
-          </h1>
-          <p class="hero-description">
-            Profuture teknoloji mekanizmaları değişikliği alanlarında özgün
-            akademik çalışmalar içeren yeni sayıya şimdi erişin.
-          </p>
-          <div class="hero-info">
-            <div class="info-item">
-              <img src="icons/cilt.svg" alt="Cilt ikonu" class="info-icon-c" />
-              <span>Cilt: <strong>2</strong></span>
-            </div>
-            <div class="info-item">
-              <img src="icons/number.svg" alt="Sayı ikonu" class="info-icon" />
-              <span>Sayı: <strong>7</strong></span>
-            </div>
-            <div class="info-item">
-            <img src="icons/calendar.svg" alt="Tarih ikonu" class="info-icon" />
-              <span><strong>Haziran 2025</strong></span>
-            </div>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Profuture Teknoloji Dergisi<br />
+          Son Sayı Yayında
+        </h1>
+        <p class="hero-description">
+          Profuture teknoloji mekanizmaları değişikliği alanlarında özgün
+          akademik çalışmalar içeren yeni sayıya şimdi erişin.
+        </p>
+        <div class="hero-info">
+          <div class="info-item">
+            <img src="icons/cilt.svg" alt="Cilt ikonu" class="info-icon-c" />
+            <span>Cilt: <strong>2</strong></span>
           </div>
-          <button class="hero-button">
-            Dergiyi Görüntüle
+          <div class="info-item">
+            <img src="icons/number.svg" alt="Sayı ikonu" class="info-icon" />
+            <span>Sayı: <strong>7</strong></span>
+          </div>
+          <div class="info-item">
+            <img src="icons/calendar.svg" alt="Tarih ikonu" class="info-icon" />
+            <span><strong>Haziran 2025</strong></span>
+          </div>
+        </div>
+        <button class="hero-button">
+          Dergiyi Görüntüle
           <img src="icons/right-arrow.svg" alt="Ok ikonu" class="arrow-icon" />
-          </button>
-        </div>
-      </section>
-
-      <div class="magazine-container">
-      <img src="images/journal-img.png" alt="Profuture Dergi Kapağı" class="magazine-cover" />
+        </button>
       </div>
+    </section>
 
-      <section class="about-section">
-        <div class="about-content">
-          <p class="about-label">Dergi Amacı ve Kapsamı</p>
-          <h2 class="about-title">Profuture Teknoloji Dergisi</h2>
-          <p class="about-description">
-            Profuture Teknoloji Dergisi, 2022 yılında yayın hayatına başlayan;
-            teknoloji, inovasyon, dijital dönüşüm ve geleceğin üretim modelleri
-            ekseninde sosyal bilimler ile mühendislik ve fen bilimlerini bir
-            araya getiren, uluslararası hakemli ve açık erişimli bir akademik
-            yayındır.
-          </p>
-          <button class="detail-button">
-            Detay
+    <div class="magazine-container">
+      <img src="images/journal-img.png" alt="Profuture Dergi Kapağı" class="magazine-cover" />
+    </div>
+
+    <section class="about-section">
+      <div class="about-content">
+        <p class="about-label">Dergi Amacı ve Kapsamı</p>
+        <h2 class="about-title">Profuture Teknoloji Dergisi</h2>
+        <p class="about-description">
+          Profuture Teknoloji Dergisi, 2022 yılında yayın hayatına başlayan;
+          teknoloji, inovasyon, dijital dönüşüm ve geleceğin üretim modelleri
+          ekseninde sosyal bilimler ile mühendislik ve fen bilimlerini bir
+          araya getiren, uluslararası hakemli ve açık erişimli bir akademik
+          yayındır.
+        </p>
+        <button class="detail-button">
+          Detay
           <img src="icons/right-arrow.svg" alt="Ok ikonu" class="right-arrow-icon" />
-          </button>
-        </div>
-      </section>
+        </button>
+      </div>
+    </section>
 
-      <!-- Dergiler Section -->
-      <section class="magazines-section">
-        <div class="magazines-header">
-          <h5 class="magazines-h5">Sayılar</h5>
-          <div class="magazines-title-row">
+    <!-- Dergiler Section -->
+    <section class="magazines-section">
+      <div class="magazines-header">
+        <h5 class="magazines-h5">Sayılar</h5>
+        <div class="magazines-title-row">
           <div class="magazines-title-with-nav">
             <h2 class="magazines-h2">Dergiler</h2>
             <div class="magazines-controls">
               <button class="swiper-button-prev-custom">
                 <img src="icons/right-arrow.svg" alt="Önceki" class="arrow-icon-prev" />
-            </button>
+              </button>
               <button class="swiper-button-next-custom">
                 <img src="icons/right-arrow.svg" alt="Sonraki" class="arrow-icon-next" />
-                </button>
+              </button>
             </div>
           </div>
           <button class="view-all-btn">
             Tümünü Görüntüle
             <img src="icons/right-arrow.svg" alt="Ok" class="arrow-icon-btn" />
-                </button>
-            </div>
-          </div>
+          </button>
+        </div>
+      </div>
 
       <div class="swiper magazines-swiper">
         <div class="swiper-wrapper">
-          <!-- Magazine kartları JavaScript ile yüklenecek -->
-          </div>
-        </div>
-      </section>
 
-      <!-- Makale Çağrısı Section -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Makale Çağrısı Section -->
     <div class="call-for-papers-wrapper">
       <section class="call-for-papers">
         <div class="cfp-container">
@@ -217,104 +221,104 @@
         </div>
       </section>
 
-      <!-- Sağdaki dergi görseli - Wrapper'a göre pozisyonlu -->
+
       <div class="cfp-card">
         <img src="images/magazine-ss.png" alt="Bilgi ve Teknoloji Araştırmaları" class="cfp-card-img" />
       </div>
     </div>
 
-      <!-- Güncel Yazılar Section -->
-      <section class="current-articles">
-        <div class="articles-container">
-          <div class="featured-magazine">
-            <div class="featured-badge">Son Sayı</div>
+    <!-- Güncel Yazılar Section -->
+    <section class="current-articles">
+      <div class="articles-container">
+        <div class="featured-magazine">
+          <div class="featured-badge">Son Sayı</div>
           <img src="images/magazine-img.png" alt="Son Sayı" class="featured-img" />
-            <div class="featured-actions">
-              <button class="featured-btn featured-btn--download">
+          <div class="featured-actions">
+            <button class="featured-btn featured-btn--download">
               <img src="icons/download.svg" alt="İndir" class="featured-icon" />
-              </button>
-              <button class="featured-btn featured-btn--view">
+            </button>
+            <button class="featured-btn featured-btn--view">
               <img src="icons/eye.svg" alt="Görüntüle" class="featured-icon" />
-                Görüntüle
-              </button>
-            </div>
+              Görüntüle
+            </button>
           </div>
+        </div>
 
-          <div class="articles-content">
-            <div class="articles-header">
-              <div>
-                <p class="articles-subtitle">Profuture Teknoloji Dergisi</p>
-                <h2 class="articles-title">Güncel Yazılar</h2>
-              </div>
-              <button class="view-all-articles-btn">
-                Tümünü Görüntüle
+        <div class="articles-content">
+          <div class="articles-header">
+            <div>
+              <p class="articles-subtitle">Profuture Teknoloji Dergisi</p>
+              <h2 class="articles-title">Güncel Yazılar</h2>
+            </div>
+            <button class="view-all-articles-btn">
+              Tümünü Görüntüle
               <img src="icons/right-arrow.svg" alt="Ok" class="arrow-btn-icon" />
-              </button>
-            </div>
+            </button>
+          </div>
 
-            <div class="articles-list">
-            <!-- Article kartları JavaScript ile yüklenecek -->
-            </div>
+          <div class="articles-list">
+
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-      <div class="footer-main">
-        <div class="footer-info">
-          <div class="footer-item">
-            <div class="footer-icon-wrapper">
+  <footer>
+    <div class="footer-main">
+      <div class="footer-info">
+        <div class="footer-item">
+          <div class="footer-icon-wrapper">
             <img src="icons/editor.svg" alt="Editör ikonu" class="footer-icon" />
-            </div>
-            <div class="footer-text">
-              <p class="footer-label">Dergi Editörü</p>
-              <p class="footer-name">Prof. Dr. Elif Başkaya Açar</p>
-              <a href="mailto:elif@gmail.com" class="footer-email">
+          </div>
+          <div class="footer-text">
+            <p class="footer-label">Dergi Editörü</p>
+            <p class="footer-name">Prof. Dr. Elif Başkaya Açar</p>
+            <a href="mailto:elif@gmail.com" class="footer-email">
               <img src="icons/email.svg" alt="Mail" class="email-icon" />
-                elif@gmail.com
-              </a>
-            </div>
+              elif@gmail.com
+            </a>
           </div>
+        </div>
 
-          <div class="footer-item">
-            <div class="footer-icon-wrapper">
+        <div class="footer-item">
+          <div class="footer-icon-wrapper">
             <img src="icons/message.svg" alt="Mail ikonu" class="footer-icon" />
-            </div>
-            <div class="footer-text">
-              <p class="footer-label">Mail Adresi</p>
-              <p class="footer-name">profuture@gmail.com</p>
-            </div>
           </div>
+          <div class="footer-text">
+            <p class="footer-label">Mail Adresi</p>
+            <p class="footer-name">profuture@gmail.com</p>
+          </div>
+        </div>
 
-          <div class="footer-item">
-            <div class="footer-icon-wrapper">
+        <div class="footer-item">
+          <div class="footer-icon-wrapper">
             <img src="icons/location.svg" alt="Konum ikonu" class="footer-icon" />
-            </div>
-            <div class="footer-text">
-              <p class="footer-label">Profuture Teknoloji Yayınevi</p>
-              <p class="footer-address">
-                Ahmet Kemal Mahallesi 1245. Cadde No: 10<br />Çankaya/Ankara
-              </p>
-            </div>
+          </div>
+          <div class="footer-text">
+            <p class="footer-label">Profuture Teknoloji Yayınevi</p>
+            <p class="footer-address">
+              Ahmet Kemal Mahallesi 1245. Cadde No: 10<br />Çankaya/Ankara
+            </p>
           </div>
         </div>
       </div>
-      <div class="footer-disclaimer">
-        <p>
-          Bu sitede yer alan tüm yazılı, görsel ve uygulama içerikleri kaynak
-          gösterilmeden kullanılamaz. Site içerisinde sunulan bilgiler yalnızca
-          bilgilendirme amacıyla hazırlanmış olup, bu bilgilerin kullanımından
-          doğabilecek her türlü sorumluluk kullanıcıya aittir. Siteye erişim
-          sağlayan kullanıcılar, bu şartları okumuş, anlamış ve kabul etmiş
-          sayılır.
-        </p>
-      </div>
+    </div>
+    <div class="footer-disclaimer">
+      <p>
+        Bu sitede yer alan tüm yazılı, görsel ve uygulama içerikleri kaynak
+        gösterilmeden kullanılamaz. Site içerisinde sunulan bilgiler yalnızca
+        bilgilendirme amacıyla hazırlanmış olup, bu bilgilerin kullanımından
+        doğabilecek her türlü sorumluluk kullanıcıya aittir. Siteye erişim
+        sağlayan kullanıcılar, bu şartları okumuş, anlamış ve kabul etmiş
+        sayılır.
+      </p>
+    </div>
 
-      <div class="footer-copyright">
-        <p>Profuture Teknoloji - Tüm Hakları Saklıdır. © 2025</p>
-      </div>
-    </footer>
-  </body>
+    <div class="footer-copyright">
+      <p>Profuture Teknoloji - Tüm Hakları Saklıdır. © 2025</p>
+    </div>
+  </footer>
+</body>
 
 </html>

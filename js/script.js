@@ -74,7 +74,7 @@ async function loadMagazineCards() {
 
     if (magazine.featured) {
       cardHTML = cardHTML.replace('class="magazine-card"', 'class="magazine-card featured"');
-    
+
       cardHTML = cardHTML.replace('<div class="card-image">', '<div class="card-image"><div class="son-sayi-badge">Son Sayı</div>');
     }
 
@@ -93,11 +93,11 @@ async function loadMagazineCards() {
     );
     cardHTML = cardHTML.replace(/Aralık 2022/, magazine.tarih);
 
-    // Wrap in swiper-slide
+  
     swiperWrapper.innerHTML += `<div class="swiper-slide">${cardHTML}</div>`;
   });
 
-  // Initialize Swiper after cards are loaded
+
   initMagazineSwiper();
 }
 
@@ -193,29 +193,49 @@ function initSearchToggle() {
   const searchButton = document.querySelector(".search-button");
   const headerButtons = document.querySelectorAll(".header-button");
   const searchInput = document.querySelector(".search-input");
+  const mobileSearchInput = document.querySelector(".mobile-search-input");
   let isSearchOpen = false;
 
   searchButton.addEventListener("click", () => {
     isSearchOpen = !isSearchOpen;
-    
+
+
+    const isMobile = window.innerWidth <= 768;
+
     if (isSearchOpen) {
-      
-      headerButtons.forEach(button => {
-        button.style.display = "none";
-      });
-      searchInput.style.display = "block";
-      searchInput.focus();
-    } else {
+      if (isMobile) {
+       
+        if (mobileSearchInput) {
+          mobileSearchInput.classList.add("active");
+          mobileSearchInput.focus();
+        }
+      } else {
     
-      headerButtons.forEach(button => {
-        button.style.display = "inline-flex";
-      });
-      searchInput.style.display = "none";
-      searchInput.value = "";
+        headerButtons.forEach(button => {
+          button.style.display = "none";
+        });
+        searchInput.style.display = "block";
+        searchInput.focus();
+      }
+    } else {
+      if (isMobile) {
+  
+        if (mobileSearchInput) {
+          mobileSearchInput.classList.remove("active");
+          mobileSearchInput.value = "";
+        }
+      } else {
+    
+        headerButtons.forEach(button => {
+          button.style.display = "inline-flex";
+        });
+        searchInput.style.display = "none";
+        searchInput.value = "";
+      }
     }
   });
 
-  // Escape tuşu ile aramayı kapat
+
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && isSearchOpen) {
       searchButton.click();
@@ -223,19 +243,19 @@ function initSearchToggle() {
   });
 }
 
-// Hamburger Menu Toggle
+
 function initHamburgerMenu() {
   const hamburgerMenu = document.querySelector(".hamburger-menu");
   const mobileMenu = document.querySelector(".mobile-menu");
-  
+
   if (!hamburgerMenu || !mobileMenu) return;
-  
+
   hamburgerMenu.addEventListener("click", () => {
     hamburgerMenu.classList.toggle("active");
     mobileMenu.classList.toggle("active");
   });
-  
-  // Menü linklerine tıklandığında menüyü kapat
+
+
   const mobileNavLinks = mobileMenu.querySelectorAll("a");
   mobileNavLinks.forEach(link => {
     link.addEventListener("click", () => {
@@ -243,8 +263,8 @@ function initHamburgerMenu() {
       mobileMenu.classList.remove("active");
     });
   });
+
   
-  // Escape tuşu ile menüyü kapat
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && mobileMenu.classList.contains("active")) {
       hamburgerMenu.classList.remove("active");

@@ -44,14 +44,20 @@
   transform: translateY(-50%) rotate(180deg);
   background-color: #DB0D15;
   color: #ffffff;
-  padding: 20px 10px;
-  border-radius: 20px 0 0 20px;
-  font-size: 14px;
+  /* 98x41 oranı: min boyutlar + clamp */
+  min-height: clamp(70px, 6.8vw, 98px);
+  min-width: clamp(29px, 2.85vw, 41px);
+  padding: 0.8em 0.5em;
+  border-radius: clamp(10px, 1vw, 14px) 0 0 clamp(10px, 1vw, 14px);
+  font-size: clamp(10px, 0.9vw, 13px);
   font-weight: 600;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-content {
@@ -242,8 +248,10 @@
   }
   
   .son-sayi-badge {
-    padding: 16px 8px;
-    font-size: 12px;
+    min-height: clamp(60px, 6vw, 85px);
+    min-width: clamp(26px, 2.5vw, 36px);
+    padding: 0.6em 0.4em;
+    font-size: clamp(9px, 0.85vw, 12px);
     left: -10px;
   }
 }
@@ -311,10 +319,10 @@
   }
   
   .son-sayi-badge {
-    padding: 14px 7px;
-    font-size: 11px;
+    padding: 1.8em 0.7em;
+    font-size: clamp(8px, 0.8vw, 11px);
     left: -8px;
-    border-radius: 16px 0 0 16px;
+    border-radius: 1em 0 0 1em;
   }
 }
 
@@ -442,15 +450,15 @@
   
   .son-sayi-badge {
     position: absolute;
-    left: 50%;
-    top: -5px;
-    transform: translateX(-50%);
-    writing-mode: horizontal-tb;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    writing-mode: vertical-rl;
     text-orientation: mixed;
-    padding: 4px 10px;
-    border-radius: 12px;
-    font-size: 9px;
-    letter-spacing: 0.3px;
+    padding: 1.5em 0.6em;
+    border-radius: 0.8em 0 0 0.8em;
+    font-size: clamp(7px, 2vw, 9px);
+    letter-spacing: 0.02em;
   }
   
   .card-badge {
